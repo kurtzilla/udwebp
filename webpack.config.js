@@ -38,9 +38,7 @@ module.exports = {
     }),
     // defines window scope variables that will be defined in our bundle.js
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new webpack.optimize.UglifyJsPlugin()
   ]
