@@ -1,11 +1,14 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+// require('dotenv').config({silent:true})
 
 const VENDOR_LIBS = [
   'faker', 'lodash', 'react', 'redux', 'react-redux', 'react-dom',
   'react-input-range', 'redux-form', 'redux-thunk'
 ];
+
+// console.log('WEBPACK', process.env.NODE_ENV)
 
 module.exports = {
   entry: {
@@ -38,9 +41,7 @@ module.exports = {
     }),
     // defines window scope variables that will be defined in our bundle.js
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
     })
   ]
 };

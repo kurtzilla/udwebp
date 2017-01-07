@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "NODE_ENV=production npm run clean && webpack -p",
+    "build": "NODE_ENV=production&&npm run clean && webpack -p",
     "serve": "webpack-dev-server",
     "deploy-git": "npm run build && git subtree push --prefix dist origin gh-pages",
     "start": "node server.js"
