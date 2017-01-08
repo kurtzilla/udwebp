@@ -14,8 +14,8 @@ if(process.env.NODE_ENV !== 'production') {
   const webpackMiddleware = require('webpack-dev-middleware');
   const webpack = require('webpack');
   const webpackConfig = require('./webpack.config.js');
-  const compiler = webpack(webpackConfig);
   
+  const compiler = webpack(webpackConfig);
   app.use(webpackMiddleware(compiler));
 } else {
    app.use(express.static('dist'));

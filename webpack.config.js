@@ -1,16 +1,14 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-// require('dotenv').config({silent:true})
 
 const VENDOR_LIBS = [
   'faker', 'lodash', 'react', 'redux', 'react-redux', 'react-dom',
   'react-input-range', 'redux-form', 'redux-thunk'
 ];
 
-// console.log('WEBPACK', process.env.NODE_ENV)
-
 module.exports = {
+  devtool: "inline-source-map",
   entry: {
       bundle: './src/index.js', // filename will be name of key - see output
       vendor: VENDOR_LIBS
