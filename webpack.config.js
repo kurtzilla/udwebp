@@ -34,10 +34,6 @@ module.exports = {
             loader: 'css-loader?sourceMap!resolve-url-loader?keepQuery!sass-loader?sourceMap'
           })
       },
-      // {
-      //   test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      //   loader: 'url-loader?limit=100000'
-      // }
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[hash].[ext]'
@@ -63,9 +59,12 @@ module.exports = {
       filename: '[id].style.css',
       allChunks: true
     }),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
     
-    // TODO activate the following on production builds only (slow build time)
+    // 14 sec
     
+    
+    // TODO activate the following on production builds only (due to slow build time)
     // new purify({
     //   basePath: 'src',
     //   purifyOptions: {
@@ -75,7 +74,7 @@ module.exports = {
     //     rejected: false
     //   }
     // }),
-    //new webpack.optimize.OccurrenceOrderPlugin(true),
+    
     // new webpack.optimize.UglifyJsPlugin()
   ]
 };

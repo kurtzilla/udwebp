@@ -11,6 +11,13 @@ cd WebpackProject
 npm install
 ```
 
+## Scss/Bootstrap/Material
+1. include import to style/scss/_application.scss in index,js
+2. import the appropriate file within _applications.scss
+3. If using material, include the material icons import in index.html
+4. jquery import is also commented out in index.html
+
+
 add node-sass and sass-loader
 extract-text-webpack-plugin
 
@@ -21,6 +28,7 @@ extract-text-webpack-plugin
 
 ### Procfile
 contains instructions for heroku deployment - specifically the command to run to start our server
+web: node server.js
 
 ### Steps to compile and deploy
 1. npm run build

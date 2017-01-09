@@ -6,11 +6,12 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import Routes from './router';
 
-import '../style/scss/_application.scss';
-// import 'style/materialize.css';
+/* This will include scss files */
+//import '../style/scss/_application.scss';
+
+import '../style/materialize.css';
 import '../style/react-range.css';
 import '../style/style.css';
-
 
 
 const App = () => {
