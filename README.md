@@ -18,13 +18,11 @@ npm install
 4. jquery import is also commented out in index.html
 
 
-add node-sass and sass-loader
-extract-text-webpack-plugin
-
+# Deployment notes 
 // git subtree push --prefix dist origin gh-pages
 "deploy-git": "npm run build && git subtree push --prefix dist origin gh-pages",
 
-# Heroku 
+## Heroku 
 
 ### Procfile
 contains instructions for heroku deployment - specifically the command to run to start our server
@@ -37,7 +35,7 @@ web: node server.js
 4. git push heroku [branch]
   
   
-# AWS Elastic Beanstalk
+## AWS Elastic Beanstalk
 ### Steps
 1. eb init (get keys from console)  
 2. eb create (long wait)  
