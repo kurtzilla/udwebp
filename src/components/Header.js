@@ -24,7 +24,8 @@ class Header extends Component {
         <nav>
           <div className="nav-wrapper">
             <div className="boot-divvie">
-              <a href="#" className="btn btn-primary">Primary Button <span className="glyphicon glyphicon-heart"></span></a>
+              <a href="#" className="btn btn-primary">Primary Button <span className="glyphicon glyphicon-heart"></span> </a>
+              <i className="material-icons">feedback</i>
             </div>
             <div className="col s12">
               <a href="#" className="brand-logo">UpStar Music</a>
