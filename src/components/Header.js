@@ -23,8 +23,12 @@ class Header extends Component {
       <div className="row">
         <nav>
           <div className="nav-wrapper">
+            <div className="boot-divvie">
+              <a href="#" className="btn btn-primary">Primary Button <span className="glyphicon glyphicon-heart"></span></a>
+            </div>
             <div className="col s12">
               <a href="#" className="brand-logo">UpStar Music</a>
+             
               <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li>
                   <Link

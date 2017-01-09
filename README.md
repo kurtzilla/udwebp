@@ -11,6 +11,9 @@ cd WebpackProject
 npm install
 ```
 
+add node-sass and sass-loader
+extract-text-webpack-plugin
+
 // git subtree push --prefix dist origin gh-pages
 "deploy-git": "npm run build && git subtree push --prefix dist origin gh-pages",
 

@@ -1,0 +1,16 @@
+#scss-slide-out {
+  font-size:24px;
+  color:blue;
+  font-weight:bold;
+  @extend .useme-dude;
+  background-color: #666;
+}
+
+#unused-slicker-style {
+  color: lemonchiffon;
+  
+}
+
+.useme-dude {
+  font-family: "Helvetica Neue";
+}

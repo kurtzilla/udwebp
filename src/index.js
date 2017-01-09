@@ -5,9 +5,13 @@ import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import Routes from './router';
-import '../style/materialize.css';
+
+import '../style/scss/_application.scss';
+// import 'style/materialize.css';
 import '../style/react-range.css';
 import '../style/style.css';
+
+
 
 const App = () => {
   const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
